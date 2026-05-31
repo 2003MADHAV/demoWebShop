@@ -5,18 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class WishListPage {
+public class ProductListPage {
+
+	@FindBy(xpath = "//h2[@class='product-title']/child::a") private WebElement firstProudct;
 	
-	@FindBy(xpath = "//td[@class='product-picture']") private WebElement productPicture;
-	
-	public WishListPage(WebDriver driver) {
+	public ProductListPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-
-	public boolean getProductPicture() {
-		return productPicture.isDisplayed();
+	
+	public void clicFirstProduct() {
+		firstProudct.click();
 	}
-	
-	
-
 }

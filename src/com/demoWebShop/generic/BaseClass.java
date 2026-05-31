@@ -1,5 +1,6 @@
 package com.demoWebShop.generic;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -11,27 +12,38 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
+import com.demoWebShop.pom.DashBoardPage;
+import com.demoWebShop.pom.HomePage;
+import com.demoWebShop.pom.LoginPage;
+
 public class BaseClass {
 	
 	public static WebDriver driver;
+	public FileLib f=new FileLib();
 	@BeforeTest
-	public void openBrowser() {
+	public void openBrowser() throws IOException {
 		ChromeOptions option =new ChromeOptions();
+		option.addArguments("--incognito");
 		driver=new ChromeDriver(option);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.get("https://demowebshop.tricentis.com");
+		String url = f.readDataFromProperty("url");
+		driver.get(url);
 	}
 	@BeforeMethod
-	public void login() {
-		driver.findElement(By.xpath("//a[text()='Log in']")).click();
-		driver.findElement(By.xpath("//input[@id='Email']")).sendKeys("madhav23@gmail.com");
-		driver.findElement(By.xpath("//input[@id='Password']")).sendKeys("mkchy@#2025");
-		driver.findElement(By.xpath("//input[@value='Log in']")).click();	
+	public void login() throws IOException {
+		DashBoardPage d=new DashBoardPage(driver);
+		d.clickOnLogin();
+		LoginPage l=new LoginPage(driver);
+		String email = f.readDataFromProperty("username");
+		String pwd = f.readDataFromProperty("pwd");
+		l.login(email, pwd);
+			
 	}
 	@AfterMethod
 	public void logout() {
-		driver.findElement(By.xpath("//a[text()='Log out']")).click();
+		HomePage h=new HomePage(driver);
+		h.clickLogout();
 		
 	}
 	@AfterTest

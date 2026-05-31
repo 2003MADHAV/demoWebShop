@@ -32,7 +32,7 @@ public class ListenerImplementation extends BaseClass implements ITestListener {
 		String date = LocalDateTime.now().toString().replace(':', '-');
 		TakesScreenshot ts=(TakesScreenshot) driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dest=new File("./screenshots"+res+date+".png");
+		File dest=new File("./screenshots/"+res+date+".png");
 		try {
 			FileHandler.copy(src, dest);
 		} catch (IOException e) {
