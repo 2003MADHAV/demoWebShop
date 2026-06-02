@@ -3,7 +3,7 @@ package com.demoWebShop.generic;
 import java.io.IOException;
 import java.time.Duration;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -19,7 +19,7 @@ import com.demoWebShop.pom.LoginPage;
 public class BaseClass {
 	
 	public static WebDriver driver;
-	public FileLib f=new FileLib();
+	public  FileLib f=new FileLib();
 	@BeforeTest
 	public void openBrowser() throws IOException {
 		ChromeOptions option =new ChromeOptions();

@@ -3,8 +3,11 @@ package com.demoWebShop.testscript;
 import java.io.IOException;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.demoWebShop.generic.BaseClass;
 import com.demoWebShop.pom.CheckoutPage;
@@ -14,6 +17,8 @@ import com.demoWebShop.pom.ProductListPage;
 import com.demoWebShop.pom.ProductOrderCompletationPage;
 import com.demoWebShop.pom.ShoppingCartPage;
 
+
+
 @Listeners(com.demoWebShop.generic.ListenerImplementation.class)
 public class CartMoudule extends BaseClass {
 
@@ -21,14 +26,14 @@ public class CartMoudule extends BaseClass {
 	public void addToCart() throws IOException {
 		
 		HomePage h=new HomePage(driver);
-		h.enterItemNameIn(f.readDataFromProperty("prudcutName"));
+		h.enterItemNameIn(f.readDataFromProperty("productName"));
 		h.clickOnSearchButton();
 		ProductListPage p=new ProductListPage(driver);
 		p.clicFirstProduct();
 		ProductDiscriptionPage pd=new ProductDiscriptionPage(driver);
 		pd.clickOnAddToCartButton();
 		String resultText =pd.getProductAddedMessage();
-		System.out.println(resultText);
+		Reporter.log(resultText, true);
 		JavascriptExecutor js=(JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0,-100)");
 		pd.clickOnShoppingCart();
@@ -66,14 +71,17 @@ public class CartMoudule extends BaseClass {
 		cp.clickConfirmOrder();
 		
 		ProductOrderCompletationPage poc = new ProductOrderCompletationPage(driver);
-		if(poc.isOrderConfirmationDisplayed()) {
-			System.out.println(poc.getOrderConfirmationText());
-		}
-		else {
-			System.out.println(poc.getOrderConfirmationText());
-		}
+		SoftAssert sf = new SoftAssert();
+
+		Reporter.log(poc.getOrderConfirmationText(), true);
+
+		sf.assertTrue(
+		        poc.isOrderConfirmationDisplayed(),
+		        "Order confirmation message is not displayed"
+		);
 
 		poc.clickContinue();
+		sf.assertAll();
 		
 	}
 }

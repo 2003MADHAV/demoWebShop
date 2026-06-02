@@ -1,45 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
     <line>
+      <![CDATA[moveToWishlisthas been Start]]>
+    </line>
+    <line>
+      <![CDATA[The product has been added to your wishlist]]>
+    </line>
+    <line>
+      <![CDATA[moveToWishlisthas been Passed]]>
+    </line>
+    <line>
+      <![CDATA[addToCarthas been Start]]>
+    </line>
+    <line>
+      <![CDATA[The product has been added to your shopping cart]]>
+    </line>
+    <line>
+      <![CDATA[Your order has been successfully processed!]]>
+    </line>
+    <line>
+      <![CDATA[addToCarthas been Passed]]>
+    </line>
+    <line>
       <![CDATA[changeAddresshas been Start]]>
+    </line>
+    <line>
+      <![CDATA[Address updated successfully]]>
     </line>
     <line>
       <![CDATA[changeAddresshas been Passed]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-06-01T00:28:20 IST" name="Default suite" finished-at="2026-06-01T00:28:35 IST" duration-ms="14831">
+  <suite started-at="2026-06-02T11:11:10 IST" name="Suite" finished-at="2026-06-02T11:12:00 IST" duration-ms="49444">
     <groups>
     </groups>
-    <test started-at="2026-06-01T00:28:20 IST" name="Default test" finished-at="2026-06-01T00:28:35 IST" duration-ms="14831">
+    <test started-at="2026-06-02T11:11:10 IST" name="Test" finished-at="2026-06-02T11:12:00 IST" duration-ms="49444">
       <class name="com.demoWebShop.testscript.AcoountModule">
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.demoWebShop.testscript.AcoountModule@436813f3]" started-at="2026-06-01T00:28:20 IST" name="openBrowser" finished-at="2026-06-01T00:28:25 IST" duration-ms="4795" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method is-config="true" signature="login()[pri:0, instance:com.demoWebShop.testscript.AcoountModule@436813f3]" started-at="2026-06-01T00:28:25 IST" name="login" finished-at="2026-06-01T00:28:26 IST" duration-ms="652" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.demoWebShop.testscript.AcoountModule@12468a38]" started-at="2026-06-02T11:11:48 IST" name="login" finished-at="2026-06-02T11:11:50 IST" duration-ms="2087" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="changeAddress()[pri:0, instance:com.demoWebShop.testscript.AcoountModule@436813f3]" started-at="2026-06-01T00:28:26 IST" name="changeAddress" finished-at="2026-06-01T00:28:34 IST" duration-ms="8197" status="PASS">
+        <test-method signature="changeAddress()[pri:0, instance:com.demoWebShop.testscript.AcoountModule@12468a38]" started-at="2026-06-02T11:11:50 IST" name="changeAddress" finished-at="2026-06-02T11:11:58 IST" duration-ms="7915" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[changeAddresshas been Start]]>
+            </line>
+            <line>
+              <![CDATA[Address updated successfully]]>
             </line>
             <line>
               <![CDATA[changeAddresshas been Passed]]>
             </line>
           </reporter-output>
         </test-method> <!-- changeAddress -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.demoWebShop.testscript.AcoountModule@436813f3]" started-at="2026-06-01T00:28:34 IST" name="logout" finished-at="2026-06-01T00:28:35 IST" duration-ms="1026" status="PASS">
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.demoWebShop.testscript.AcoountModule@12468a38]" started-at="2026-06-02T11:11:58 IST" name="logout" finished-at="2026-06-02T11:12:00 IST" duration-ms="1350" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.demoWebShop.testscript.AcoountModule@436813f3]" started-at="2026-06-01T00:28:35 IST" name="closeBrowser" finished-at="2026-06-01T00:28:35 IST" duration-ms="132" status="PASS">
+      </class> <!-- com.demoWebShop.testscript.AcoountModule -->
+      <class name="com.demoWebShop.testscript.WishlistMoudle">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.demoWebShop.testscript.WishlistMoudle@4a94ee4]" started-at="2026-06-02T11:11:10 IST" name="openBrowser" finished-at="2026-06-02T11:11:16 IST" duration-ms="5889" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.demoWebShop.testscript.WishlistMoudle@4a94ee4]" started-at="2026-06-02T11:11:16 IST" name="login" finished-at="2026-06-02T11:11:20 IST" duration-ms="3546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="moveToWishlist()[pri:0, instance:com.demoWebShop.testscript.WishlistMoudle@4a94ee4]" started-at="2026-06-02T11:11:20 IST" name="moveToWishlist" finished-at="2026-06-02T11:11:27 IST" duration-ms="7257" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[moveToWishlisthas been Start]]>
+            </line>
+            <line>
+              <![CDATA[The product has been added to your wishlist]]>
+            </line>
+            <line>
+              <![CDATA[moveToWishlisthas been Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- moveToWishlist -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.demoWebShop.testscript.WishlistMoudle@4a94ee4]" started-at="2026-06-02T11:11:27 IST" name="logout" finished-at="2026-06-02T11:11:29 IST" duration-ms="1472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.demoWebShop.testscript.WishlistMoudle@4a94ee4]" started-at="2026-06-02T11:12:00 IST" name="closeBrowser" finished-at="2026-06-02T11:12:00 IST" duration-ms="269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.demoWebShop.testscript.AcoountModule -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.demoWebShop.testscript.WishlistMoudle -->
+      <class name="com.demoWebShop.testscript.CartMoudule">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.demoWebShop.testscript.CartMoudule@9f116cc]" started-at="2026-06-02T11:11:29 IST" name="login" finished-at="2026-06-02T11:11:31 IST" duration-ms="2044" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="addToCart()[pri:0, instance:com.demoWebShop.testscript.CartMoudule@9f116cc]" started-at="2026-06-02T11:11:31 IST" name="addToCart" finished-at="2026-06-02T11:11:47 IST" duration-ms="16191" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[addToCarthas been Start]]>
+            </line>
+            <line>
+              <![CDATA[The product has been added to your shopping cart]]>
+            </line>
+            <line>
+              <![CDATA[Your order has been successfully processed!]]>
+            </line>
+            <line>
+              <![CDATA[addToCarthas been Passed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.demoWebShop.testscript.CartMoudule@9f116cc]" started-at="2026-06-02T11:11:47 IST" name="logout" finished-at="2026-06-02T11:11:48 IST" duration-ms="1341" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.demoWebShop.testscript.CartMoudule -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

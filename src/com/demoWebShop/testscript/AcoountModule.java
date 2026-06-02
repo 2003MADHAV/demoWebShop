@@ -3,6 +3,8 @@ package com.demoWebShop.testscript;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -36,11 +38,11 @@ public class AcoountModule extends BaseClass{
 		myAcc.setPhoneNumber(f.readDataFromExcel("Address", 1, 10));
 		myAcc.setFaxNumber(f.readDataFromExcel("Address", 1, 11));
 		myAcc.clickSaveButton();
-		if(myAcc.isAddressUpdated()) {
-			System.out.println("Address is Updated");
-		} else {
-			System.out.println("Address is not Updated");
-		}
+		Assert.assertTrue(
+				myAcc.isAddressUpdated(),
+				"Address update failed");
+
+		Reporter.log("Address updated successfully", true);
 		
 	}
 
